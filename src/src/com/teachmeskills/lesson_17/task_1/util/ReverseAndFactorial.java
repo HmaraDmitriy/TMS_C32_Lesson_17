@@ -16,7 +16,7 @@ public class ReverseAndFactorial {
             System.out.println("Enter a string to reverse: ");
             String input = scanner.nextLine();
 
-            GenericFunction<String, String> reverseString = str -> new StringBuilder(str).reverse().toString();
+            GenericFunction<String> reverseString = str -> new StringBuilder(str).reverse().toString();
 
             System.out.println("Result: " + reverseString.apply(input));
 
@@ -24,7 +24,7 @@ public class ReverseAndFactorial {
             System.out.println("Enter a number to find the factorial: ");
             int number = scanner.nextInt();
 
-            GenericFunction<Integer, Integer> factorial = n -> {
+            GenericFunction<Integer> factorial = n -> {
                 if (n == 0 || n == 1) return 1;
                 int result = 1;
                 for (int i = 2; i <= n; i++) {
